@@ -4,6 +4,7 @@ $(document).ready(function () {
     var user = $('#user').text();
     // show join box
     if (user === "") {
+        $('#channel').hide();
         $('#ask').show();
         $('#ask input').focus();
     } else { //rejoin using old session
@@ -14,6 +15,7 @@ $(document).ready(function () {
     $('#ask input').keydown(function (event) {
         if (event.keyCode == 13) {
             $('#ask a').click();
+            location.reload();
         }
     });
 
@@ -29,6 +31,7 @@ $(document).ready(function () {
         $('#ask').hide();
         $('#channel').show();
         $('input#message').focus();
+
         /*
          Connect to socket.io on the server.
          */
@@ -62,6 +65,7 @@ $(document).ready(function () {
         socket.on('reconnecting', function () {
             console.log('reconnecting');
         });
+
 
         var tryReconnect = function () {
             ++reconnectCount;

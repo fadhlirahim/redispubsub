@@ -72,8 +72,11 @@ div#msgs ul {
 }
 
 div#msgs li {
-    line-height: 20px;
+    padding: 5px 10px;
 }
+
+div#msgs li:nth-child(odd) { background: #eee; }
+div#msgs li:nth-child(even) { background: #aaa; }
 
 div#msgs li span.user {
     color: #ff9900;
