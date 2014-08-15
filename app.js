@@ -13,7 +13,7 @@ var io = require('socket.io').listen(server);
 
 
 //Set xhr-polling as WebSocket is not supported by CF
-io.set("transports", ["xhr-polling"]);
+io.set("transports", ["polling", "websocket"]);
 
 //Set Socket.io's log level to 1 (info). Default is 3 (debugging)
 io.set('log level', 1);
@@ -22,7 +22,8 @@ io.set('log level', 1);
 /*
  Also use Redis for Session Store. Redis will keep all Express sessions in it.
  */
-var RedisStore = require('connect-redis')(express),
+var session = require('express-session'),
+    RedisStore = require('connect-redis')(session),
     rClient = redis.createClient(),
     sessionStore = new RedisStore({client:rClient});
 
