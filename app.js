@@ -34,7 +34,7 @@ var session = require('express-session'),
 var cookieParser = express.cookieParser('your secret here');
 
 app.configure(function () {
-    app.set('port', process.env.PORT || 3003);
+    app.set('port', process.env.PORT || 3000);
     app.set('views', __dirname + '/views');
     app.set('view engine', 'ejs');
     app.use(express.favicon());
@@ -128,6 +128,6 @@ sessionSockets.on('connection', function (err, socket, session) {
 
 
 server.listen(app.get('port'), function () {
-    var serverName = process.env.VCAP_APP_HOST ? process.env.VCAP_APP_HOST + ":" + process.env.VCAP_APP_PORT : 'localhost:3003';
+    var serverName = process.env.VCAP_APP_HOST ? process.env.VCAP_APP_HOST + ":" + process.env.VCAP_APP_PORT : 'localhost:3000';
     console.log("Express server listening on " + serverName);
 });
