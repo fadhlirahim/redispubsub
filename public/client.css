@@ -26,13 +26,15 @@ div.bordered {
 }
 
 #ask {
-    font-size: 20pt;
+    font-size: 12pt;
+    text-align: left;
 }
 
 #ask input {
-    font-size: 20pt;
+    font-size: 15pt;
     padding: 10px;
     margin: 0 10px;
+    width: 50%;
 }
 
 #ask span.join {
