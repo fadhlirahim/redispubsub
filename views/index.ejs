@@ -1,3 +1,4 @@
+
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
 <script src='http://datejs.googlecode.com/svn/trunk/build/date.js'></script>
 <script src="/socket.io/socket.io.js"></script>
@@ -5,20 +6,21 @@
 <link rel="stylesheet" href="/client.css"/>
 </head>
 <body>
-<b>Server: </b><%= server %>
-<br/>
+
 <% if(user) { %>
 <b>User: </b> <label id="user"><%= user %></label> <a href="/logout" style='color:blue;text-decoration: underline'> Log out</a>
 <% } %>
 
 
-<div id="ask" class="bordered" style="display: none;">
+<div id="ask" class="bordered">
     Name: <input type="text" id="name"/> <a href="#"><span class="join">Join!</span></a>
 </div>
-<div id="channel" class="bordered" style="display: none;">
+
+
+<div id="channel" class="bordered">
 
     <div id="msgs">
-        <h4>Server: <%= server %></h4>
+        <h4>Viki Cinema Chat</h4>
 
         <ul>
             <li class="message" style="display: none">

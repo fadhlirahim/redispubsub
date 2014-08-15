@@ -13,10 +13,9 @@ a:hover {
 
 div.bordered {
     margin: 0 auto;
-    width: 600px;
+    width: 100%;
     padding: 20px;
     text-align: center;
-    border: 1px solid #ddd;
     -webkit-border-radius: 20px;
 }
 
@@ -55,7 +54,7 @@ div.bordered {
     text-align: left;
     line-height: 20px;
     padding: 5px;
-    width: 630px;
+    width: 100%;
 }
 
 div#msgs {
@@ -91,7 +90,6 @@ div#msgs li span.time {
 }
 
 div#msgs li.control {
-    text-align: center;
 }
 
 div#msgs li.control span.message {
@@ -104,8 +102,8 @@ div#input {
 }
 
 div#input #message {
-    width: 600px;
+    width: 100%;
     border: 5px solid #bbb;
     -webkit-border-radius: 3px;
-    font-size: 30pt;
+    font-size: 16pt;
 }
